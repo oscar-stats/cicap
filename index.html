@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.sng {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.def {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICAPY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .header {
+            background-color: #336699;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #336699;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover, .tab.active {
+            color: #000;
+            border-bottom: 3px solid #336699;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section-box h2 {
+            margin-top: 0;
+            color: #336699;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CENTRO DE INVESTIGACIÓN Y CAPACITACIÓN PARAGUAY</h1>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'powerbi')">CICAP</div>
+        <div class="tab" onclick="openTab(event, 'excel')">Excel</div>
+        <div class="tab" onclick="openTab(event, 'power')">Power BI</div>
+        <div class="tab" onclick="openTab(event, 'python')">Python</div>
+        <div class="tab" onclick="openTab(event, 'r')">R</div>
+        <div class="tab" onclick="openTab(event, 'sql')">SQL</div>
+    </div>
+
+
+
+    <div id="powerbi" class="tab-content active">
+    <section class="section-box">
+            <h2>Excel</h2>
+            <p>Cursos desde lo básico hasta funciones avanzadas y Power Query.</p>
+        </section>
+    </div>
+    
+    
+    
+    
+     <div id="excel" class="tab-content">
+        <section class="section-box">
+            <h2>Excel</h2>
+            <p>Cursos desde lo básico hasta funciones avanzadas y Power Query.</p>
+        </section>
+    </div>
+
+     
+
+
+ <div id="power" class="tab-content">
+             <section class="section-box">
+    <h1 style="text-align: center; color: #336699;">CURSO DE POWER BI</h1>
+    <h2 style="text-align: center; color: #336699;">Herramienta de Business Intelligence </h2>
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="power.jpg" alt="Curso de Power BI" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</section>
+
+
+    
+        <section class="section-box">
+    <h2 style="text-align: center; color: #336699;">Nivel del Curso</h2>
+    <p>El curso está diseñado para participantes que comienzan desde principiante y avanza hasta nivel avanzado, cubriendo todos los aspectos esenciales:</p>
+    <ul>
+        <li><strong>Nivel Principiante:</strong> No se requiere experiencia previa en Power BI ni en análisis de datos. Comienza con los conceptos básicos.</li>
+        <li><strong>Nivel Intermedio:</strong> Ideal para quienes tienen conocimientos básicos y quieren aprender transformaciones de datos y análisis más complejos.</li>
+        <li><strong>Nivel Avanzado:</strong> Enfocado en el dominio del análisis avanzado, el uso de DAX y la creación de dashboards interactivos.</li>
+    </ul>
+</section>
+
+<section class="section-box">
+    <h2 style="text-align: center; color: #336699;">Metodología</h2>
+    <ul>
+        <li>Clases en vivo a través de Zoom, facilitando la interacción directa con el instructor.</li>
+        <li>Clases grabadas disponibles para consulta posterior.</li>
+        <li>Actividades prácticas: Ejercicios y proyectos aplicados.</li>
+        <li>Asesoramiento personalizado durante y después de las sesiones.</li>
+    </ul>
+</section>
+
+<section class="section-box">
+    <h2 style="text-align: center; color: #336699;">Objetivos del Curso</h2>
+    <p>Al finalizar este curso, los participantes serán capaces de:</p>
+    <ul>
+        <li>Descargar, instalar y personalizar el entorno de Power BI.</li>
+        <li>Importar y transformar datos desde múltiples fuentes utilizando Power Query.</li>
+        <li>Diseñar modelos de datos eficientes y establecer relaciones entre tablas.</li>
+        <li>Crear medidas avanzadas y columnas calculadas con el lenguaje DAX.</li>
+        <li>Diseñar dashboards interactivos y personalizados para la toma de decisiones.</li>
+        <li>Aplicar herramientas de inteligencia artificial para análisis avanzado.</li>
+        <li>Desarrollar y presentar un proyecto final basado en datos reales.</li>
+    </ul>
+</section>
+
+<section class="section-box">
+    <h2 style="text-align: center; color: #336699;">Inscripción</h2>
+    <p>Completar el siguiente formulario: <a href="https://forms.gle/rHj7KsVs2YqAy2zz6" target="_blank">Haz clic aquí</a></p>
+    </section>
+    
+    <section class="section-box">
+    <h2 style="text-align: center; color: #336699;">Formas de Pago</h2>
+        <li><strong>Transferencia bancaria:</strong> Banco Itaú, Cta. Nº 720005407</li>
+        <li>Titular: Oscar Gonzalez Frutos</li>
+        <li>CI: 3584172</li>
+        <li>Alias: 3584172</li>
+        <li>Giros Tigo: 0983 352 932</li>
+    </ul>
+    </section>
+    
+    <section class="section-box">
+    <h2 style="text-align: center; color: #336699;">Costo del Curso</h2>
+    
+    <p><strong>Costo del Curso:</strong> 350.000 Gs (Pago Único). Incluye materiales, grabaciones y certificado.</p>
+    <p><strong>Descuentos para grupos:</strong></p>
+    <ul>
+        <li>2 personas: 300.000 Gs c/u</li>
+        <li>3 personas: 250.000 Gs c/u</li>
+        <li>4 o más: 200.000 Gs c/u</li>
+    </ul>
+</section>
+
+<section class="section-box">
+    <h2>Únete al Grupo de WhatsApp</h2>
+    <p>Para estar al tanto de las últimas novedades, actualizaciones y detalles importantes del curso, te invitamos a unirte a nuestro grupo de WhatsApp.</p>
+    <p>Haz clic en el siguiente enlace para unirte:</p>
+    <p><a href="https://chat.whatsapp.com/DpsJX1KGrnC88wYwd2juoA" target="_blank">Únete al Grupo de WhatsApp</a></p>
+</section>
+
+
+ <section class="section-box">
+    <h2>Contenido del Curso</h2>
+    <h3>Sección 1: Introducción a Power BI</h3>
+    <ul>
+        <li>Bienvenida al curso y estructura general.</li>
+        <li>Descarga e instalación de Power BI Desktop.</li>
+        <li>Configuración inicial y personalización del entorno.</li>
+        <li>Exploración de la interfaz y herramientas principales.</li>
+        <li>Flujo de trabajo básico: del origen de datos al reporte final.</li>
+    </ul>
+    <h3>Sección 2: Conectando y Transformando Datos con Power Query</h3>
+    <ul>
+        <li>Conexión a datos desde diversas fuentes.</li>
+        <li>Limpieza de datos: Eliminación de duplicados y errores.</li>
+        <li>Transformaciones básicas y avanzadas:</li>
+        <ul>
+            <li>Pivotear y despivotear columnas.</li>
+            <li>Combinar y anexar tablas.</li>
+            <li>Creación de fórmulas personalizadas.</li>
+        </ul>
+        <li>Automatización: Configuración de procesos repetitivos.</li>
+    </ul>
+    <h3>Sección 3: Modelado de Datos</h3>
+    <ul>
+        <li>Diferencias entre tablas de hechos y dimensiones.</li>
+        <li>Importancia de las relaciones entre tablas.</li>
+        <li>Creación de relaciones entre tablas: esquemas estrella y copo de nieve.</li>
+        <li>Optimización del modelo para consultas rápidas.</li>
+    </ul>
+    <h3>Sección 4: Análisis Avanzado con DAX</h3>
+    <ul>
+        <li>Introducción al lenguaje DAX: propósito y sintaxis básica.</li>
+        <li>Creación de columnas calculadas y medidas.</li>
+        <li>Funciones avanzadas: matemáticas, de tiempo, y filtros.</li>
+    </ul>
+    <h3>Sección 5: Creación de Dashboards Interactivos</h3>
+    <ul>
+        <li>Diseño de reportes interactivos.</li>
+        <li>Uso de visualizaciones avanzadas.</li>
+        <li>Interactividad con filtros, segmentaciones y botones.</li>
+    </ul>
+    <h3>Sección 6: Publicación y Distribución de Reportes</h3>
+    <ul>
+        <li>Publicación de reportes en Power BI Service.</li>
+        <li>Configuración de seguridad y permisos de acceso.</li>
+        <li>Uso de Power BI Mobile para dispositivos móviles.</li>
+    </ul>
+    <h3>Sección 7: Proyecto Final</h3>
+    <p>Desarrollo de un proyecto final basado en datos reales, aplicando todas las técnicas aprendidas.</p>
+</section>
+
+    </div>
+
+
+
+   
+
+
+
+
+
+    <div id="python" class="tab-content">
+        <section class="section-box">
+            <h2>Python</h2>
+            <p>Herramientas de análisis, machine learning y visualización avanzada.</p>
+        </section>
+    </div>
+
+
+<div id="r" class="tab-content">
+        <section class="section-box">
+            <h2>R </h2>
+            <p>Herramientas de análisis, machine learning y visualización avanzada.</p>
+        </section>
+    </div>
+
+
+
+
+
+    <div id="sql" class="tab-content">
+        <section class="section-box">
+            <h2>SQL</h2>
+            <p>Gestión de bases de datos, consultas y optimización de procesos ETL.</p>
+        </section>
+    </div>
+
+    <script>
+        function openTab(event, tabName) {
+            // Ocultar todas las pestañas
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tabContent => {
+                tabContent.classList.remove('active');
+            });
+
+            // Quitar la clase activa de todas las pestañas
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Mostrar el contenido de la pestaña seleccionada
+            document.getElementById(tabName).classList.add('active');
+            // Agregar la clase activa a la pestaña seleccionada
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+<footer class="footer" style="background-color: #336699; color: #fff; text-align: center; padding: 10px; margin-top: 30px;">
+    
+    <p><strong>Instituto Técnico Superior</strong></p>
+    <p><strong>Centro de Investigación y Capacitación Paraguay</strong></p>
+    <p><strong>Teléfono:</strong> 0983 352 932</p>
+    <p><strong>Correo Electrónico:</strong> <a href="mailto:cicap2021@gmail.com" style="color: #ffdd44;">cicap2021@gmail.com</a></p>
+    <p><strong>Asunción - Paraguay</strong></p>
+</footer>
+</body>
+</html>
