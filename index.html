@@ -80,12 +80,16 @@
             background-color: #336699;
             color: #fff;
             padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            flex-wrap: wrap;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 1.5rem;
         }
 
         .tabs {
@@ -93,6 +97,7 @@
             justify-content: center;
             background-color: #fff;
             border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
         }
 
         .tab {
@@ -102,6 +107,7 @@
             color: #336699;
             border-bottom: 3px solid transparent;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .tab:hover, .tab.active {
@@ -133,49 +139,80 @@
             margin-top: 0;
             color: #336699;
         }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>CENTRO DE INVESTIGACIÓN Y CAPACITACIÓN PARAGUAY</h1>
-    </div>
+   <div class="header">
+  <img src="cicap.png" alt="Logo de CICAPY" style="max-width: 400px; height: auto;">
+  </div>
+
 
     <div class="tabs">
-        <div class="tab active" onclick="openTab(event, 'powerbi')">CICAP</div>
+        <div class="tab active" onclick="openTab(event, 'cicap')">CICAPY</div>
         <div class="tab" onclick="openTab(event, 'excel')">Excel</div>
-        <div class="tab" onclick="openTab(event, 'power')">Power BI</div>
+        <div class="tab" onclick="openTab(event, 'powerbi')">Power BI</div>
         <div class="tab" onclick="openTab(event, 'python')">Python</div>
         <div class="tab" onclick="openTab(event, 'r')">R</div>
         <div class="tab" onclick="openTab(event, 'sql')">SQL</div>
     </div>
 
+    <!-- Contenido de las pestañas --> 
+    <div id="cicap" class="tab-content active">
+  <section class="section-box">
+    <h2>¡Bienvenidos a CICAPY!</h2>
+    <p>
+      En el <strong>Instituto Técnico Superior Centro de Investigación y Capacitación Paraguay (CICAPY)</strong>, nos especializamos en ofrecer 
+      educación virtual de alta calidad. Nuestro enfoque está en tecnologías modernas para el análisis de datos, 
+      potenciando tus habilidades para enfrentar los desafíos del mundo profesional.
+    </p>
+    <p>
+      CICAPY fue creado por la <strong>Resolución 848/2022</strong> del 
+      <strong>Ministerio de Educación y Ciencias</strong>, consolidando nuestro compromiso con la educación de excelencia 
+      en Paraguay.
+    </p>
+  </section>
+  <section class="section-box">
+    <h3>Misión</h3>
+    <p>
+      Formar profesionales altamente capacitados mediante programas educativos virtuales innovadores en tecnologías 
+      de análisis de datos, promoviendo la transformación digital y la toma de decisiones basada en datos en Paraguay 
+      y más allá.
+    </p>
+  </section>
+  <section class="section-box">
+    <h3>Visión</h3>
+    <p>
+      Ser reconocidos como un referente regional en educación virtual, transformando el aprendizaje en análisis de 
+      datos y contribuyendo al desarrollo tecnológico y profesional de nuestros estudiantes.
+    </p>
+  </section>
+</div>
 
 
-    <div id="powerbi" class="tab-content active">
-    <section class="section-box">
-            <h2>Excel</h2>
-            <p>Cursos desde lo básico hasta funciones avanzadas y Power Query.</p>
-        </section>
-    </div>
-    
-    
-    
-    
-     <div id="excel" class="tab-content">
+
+    <div id="excel" class="tab-content">
         <section class="section-box">
             <h2>Excel</h2>
             <p>Cursos desde lo básico hasta funciones avanzadas y Power Query.</p>
         </section>
     </div>
 
-     
-
-
- <div id="power" class="tab-content">
+    <div id="powerbi" class="tab-content">
              <section class="section-box">
     <h1 style="text-align: center; color: #336699;">CURSO DE POWER BI</h1>
-    <h2 style="text-align: center; color: #336699;">Herramienta de Business Intelligence </h2>
-    <div style="text-align: center; margin-top: 20px;">
+        <div style="text-align: center; margin-top: 20px;">
         <img src="power.jpg" alt="Curso de Power BI" style="max-width: 100%; height: auto; border-radius: 8px;">
     </div>
 </section>
@@ -305,60 +342,57 @@
     </div>
 
 
-
-   
-
-
-
-
-
     <div id="python" class="tab-content">
         <section class="section-box">
             <h2>Python</h2>
-            <p>Herramientas de análisis, machine learning y visualización avanzada.</p>
+            <p>Desarrolla habilidades en análisis, machine learning y visualización avanzada.</p>
         </section>
     </div>
 
-
-<div id="r" class="tab-content">
+    <div id="r" class="tab-content">
         <section class="section-box">
-            <h2>R </h2>
-            <p>Herramientas de análisis, machine learning y visualización avanzada.</p>
+            <h2>R</h2>
+            <p>Herramientas avanzadas para análisis y modelado de datos.</p>
         </section>
     </div>
-
-
-
-
 
     <div id="sql" class="tab-content">
         <section class="section-box">
             <h2>SQL</h2>
-            <p>Gestión de bases de datos, consultas y optimización de procesos ETL.</p>
+            <p>Gestión de bases de datos y optimización de consultas.</p>
         </section>
     </div>
 
     <script>
         function openTab(event, tabName) {
-            // Ocultar todas las pestañas
             const tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(tabContent => {
                 tabContent.classList.remove('active');
             });
 
-            // Quitar la clase activa de todas las pestañas
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => {
                 tab.classList.remove('active');
             });
 
-            // Mostrar el contenido de la pestaña seleccionada
             document.getElementById(tabName).classList.add('active');
-            // Agregar la clase activa a la pestaña seleccionada
             event.currentTarget.classList.add('active');
-        }
-    </script>
 
+            // Actualizar URL con el hash
+            window.location.hash = tabName;
+        }
+
+        // Mantener la pestaña activa al cargar la página
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const activeTab = document.querySelector(`.tab[onclick="openTab(event, '${hash}')"]`);
+                if (activeTab) {
+                    activeTab.click();
+                }
+            }
+        });
+    </script>
 <footer class="footer" style="background-color: #336699; color: #fff; text-align: center; padding: 10px; margin-top: 30px;">
     
     <p><strong>Instituto Técnico Superior</strong></p>
